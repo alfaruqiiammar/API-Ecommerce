@@ -1,0 +1,257 @@
+[2019-08-26 12:24:05,498] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/auth?", "request": {"username": "ammar", "password": "satudua"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjY3OTcwNDUsIm5iZiI6MTU2Njc5NzA0NSwianRpIjoiY2RkNTM0ZjctZTQ5My00MDVhLTgwY2YtNGM3MjliNjJjYTFiIiwiZXhwIjoxNTY2ODgzNDQ1LCJpZGVudGl0eSI6eyJ1c2VybmFtZSI6ImFtbWFyIiwiZW1haWwiOiJhZ3VuZ0BkYXNhLmNvbSIsInN0YXR1cyI6dHJ1ZX0sImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjo0fX0.LNFsarVQ17gLzcehOFcFv3oggOVqMFLoOy-jddS1CKw", "data": {"username": "ammar", "email": "agung@dasa.com", "status": true}}}
+[2019-08-26 12:24:05,590] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item?", "request": {}, "response": [{"item_id": 1, "nama": "Berbagi 50.000", "detail": "Dengan donasi 50000 rupiah, sahabat sudah berbagi kebahagiaan kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinOQlC5wvz8F21231_vTtpHAlU6NUKZz9M8Q2Ga9VWDdvnNCz", "harga": 50000, "total": 1}, {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}, {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}, {"item_id": 4, "nama": "Berbagi 1000", "detail": "Dengan donasi 1000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 1000, "total": 1}, {"item_id": 5, "nama": "Berbagi 2000", "detail": "Dengan donasi 2000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 2000, "total": 1}, {"item_id": 10, "nama": "dsad", "detail": "dsadsa", "url": "dsadsa", "harga": 555, "total": 5}, {"item_id": 11, "nama": "aaa", "detail": "aaa", "url": "aaa", "harga": 111, "total": 1}, {"item_id": 12, "nama": "111", "detail": "111", "url": "11", "harga": 11, "total": 11}]}
+[2019-08-26 12:24:07,297] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-26 12:24:07,307] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user?", "request": {}, "response": {"user_id": 4, "username": "ammar", "email": "agung@dasa.com", "password": "satudua", "status": true}}
+[2019-08-26 12:24:12,038] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-26 12:24:12,045] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user?", "request": {}, "response": {"user_id": 4, "username": "ammar", "email": "agung@dasa.com", "password": "satudua", "status": true}}
+[2019-08-26 12:24:37,101] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-26 12:24:37,113] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user?", "request": {}, "response": {"user_id": 4, "username": "ammar", "email": "agung@dasa.com", "password": "satudua", "status": true}}
+[2019-08-26 12:24:37,859] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item?", "request": {}, "response": [{"item_id": 1, "nama": "Berbagi 50.000", "detail": "Dengan donasi 50000 rupiah, sahabat sudah berbagi kebahagiaan kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinOQlC5wvz8F21231_vTtpHAlU6NUKZz9M8Q2Ga9VWDdvnNCz", "harga": 50000, "total": 1}, {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}, {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}, {"item_id": 4, "nama": "Berbagi 1000", "detail": "Dengan donasi 1000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 1000, "total": 1}, {"item_id": 5, "nama": "Berbagi 2000", "detail": "Dengan donasi 2000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 2000, "total": 1}, {"item_id": 10, "nama": "dsad", "detail": "dsadsa", "url": "dsadsa", "harga": 555, "total": 5}, {"item_id": 11, "nama": "aaa", "detail": "aaa", "url": "aaa", "harga": 111, "total": 1}, {"item_id": 12, "nama": "111", "detail": "111", "url": "11", "harga": 11, "total": 11}]}
+[2019-08-26 12:24:39,243] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-26 12:24:39,252] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user?", "request": {}, "response": {"user_id": 4, "username": "ammar", "email": "agung@dasa.com", "password": "satudua", "status": true}}
+[2019-08-26 12:24:40,313] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item?", "request": {}, "response": [{"item_id": 1, "nama": "Berbagi 50.000", "detail": "Dengan donasi 50000 rupiah, sahabat sudah berbagi kebahagiaan kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinOQlC5wvz8F21231_vTtpHAlU6NUKZz9M8Q2Ga9VWDdvnNCz", "harga": 50000, "total": 1}, {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}, {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}, {"item_id": 4, "nama": "Berbagi 1000", "detail": "Dengan donasi 1000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 1000, "total": 1}, {"item_id": 5, "nama": "Berbagi 2000", "detail": "Dengan donasi 2000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 2000, "total": 1}, {"item_id": 10, "nama": "dsad", "detail": "dsadsa", "url": "dsadsa", "harga": 555, "total": 5}, {"item_id": 11, "nama": "aaa", "detail": "aaa", "url": "aaa", "harga": 111, "total": 1}, {"item_id": 12, "nama": "111", "detail": "111", "url": "11", "harga": 11, "total": 11}]}
+[2019-08-26 12:24:40,917] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-26 12:24:40,925] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user?", "request": {}, "response": {"user_id": 4, "username": "ammar", "email": "agung@dasa.com", "password": "satudua", "status": true}}
+[2019-08-26 12:59:11,357] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/auth?", "request": {"username": "Dwita", "password": "dwita123"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjY3OTkxNTEsIm5iZiI6MTU2Njc5OTE1MSwianRpIjoiNTE5YjczMDAtMDAxYi00N2NhLTk5YWEtYTJjYjBjOTBiNDM5IiwiZXhwIjoxNTY2ODg1NTUxLCJpZGVudGl0eSI6eyJ1c2VybmFtZSI6IkR3aXRhIiwiZW1haWwiOiJkd2l0YWNhbnRpa0Bkd2l0YS5jb20iLCJzdGF0dXMiOmZhbHNlfSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIiwidXNlcl9jbGFpbXMiOnsiaWQiOjIwfX0.XGBb1W2lPYyDXN8NNMMb2diLUy6AmFSTg_dhBDyv2KI", "data": {"username": "Dwita", "email": "dwitacantik@dwita.com", "status": false}}}
+[2019-08-26 12:59:15,414] {/home/alta4/.local/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /auth [GET]
+Traceback (most recent call last):
+  File "/home/alta4/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/.local/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/.local/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/.local/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 273, in _decode_jwt_from_request
+    decoded_token = decode_token(encoded_token, csrf_token)
+  File "/home/alta4/.local/lib/python3.6/site-packages/flask_jwt_extended/utils.py", line 108, in decode_token
+    allow_expired=allow_expired
+  File "/home/alta4/.local/lib/python3.6/site-packages/flask_jwt_extended/tokens.py", line 139, in decode_jwt
+    leeway=leeway, options=options, issuer=issuer)
+  File "/home/alta4/.local/lib/python3.6/site-packages/jwt/api_jwt.py", line 104, in decode
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "/home/alta4/.local/lib/python3.6/site-packages/jwt/api_jwt.py", line 134, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "/home/alta4/.local/lib/python3.6/site-packages/jwt/api_jwt.py", line 175, in _validate_exp
+    raise ExpiredSignatureError('Signature has expired')
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+[2019-08-26 12:59:15,421] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-26 12:59:26,521] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/auth?", "request": {"username": "Dwita", "password": "dwita123"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjY3OTkxNjYsIm5iZiI6MTU2Njc5OTE2NiwianRpIjoiOGRjZWU2MWMtZGEzZC00MzhkLWEwMjItN2IyZmEwNDA4NGJlIiwiZXhwIjoxNTY2ODg1NTY2LCJpZGVudGl0eSI6eyJ1c2VybmFtZSI6IkR3aXRhIiwiZW1haWwiOiJkd2l0YWNhbnRpa0Bkd2l0YS5jb20iLCJzdGF0dXMiOmZhbHNlfSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIiwidXNlcl9jbGFpbXMiOnsiaWQiOjIwfX0.Ir5W0jiQTckBwxV9gzPifPHcVeflqCnxFgVAXQpWc1w", "data": {"username": "Dwita", "email": "dwitacantik@dwita.com", "status": false}}}
+[2019-08-26 13:01:20,927] {/home/alta4/.local/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [POST]
+Traceback (most recent call last):
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'asasmmsasar' for key 'username'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta4/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/user/resources.py", line 47, in post
+    db.session.commit()
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 494, in commit
+    self._prepare_impl()
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 473, in _prepare_impl
+    self.session.flush()
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2459, in flush
+    self._flush(objects)
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 153, in reraise
+    raise value
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2557, in _flush
+    flush_context.execute()
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1138, in _emit_insert_statements
+    statement, params
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'asasmmsasar' for key 'username'")
+[SQL: INSERT INTO user (username, email, password, status) VALUES (%(username)s, %(email)s, %(password)s, %(status)s)]
+[parameters: {'username': 'asasmmsasar', 'email': 'agusang@dassasa.com', 'password': 'satudua', 'status': 1}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2019-08-26 13:01:20,945] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": {"username": "asasmmsasar", "email": "agusang@dassasa.com", "password": "satudua", "status": true}, "response": {"message": "Internal Server Error"}}
+[2019-08-26 13:01:31,810] {/home/alta4/.local/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [POST]
+Traceback (most recent call last):
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'agusang@dassasa.com' for key 'email'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta4/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/user/resources.py", line 47, in post
+    db.session.commit()
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 494, in commit
+    self._prepare_impl()
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 473, in _prepare_impl
+    self.session.flush()
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2459, in flush
+    self._flush(objects)
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 153, in reraise
+    raise value
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2557, in _flush
+    flush_context.execute()
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1138, in _emit_insert_statements
+    statement, params
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta4/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta4/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'agusang@dassasa.com' for key 'email'")
+[SQL: INSERT INTO user (username, email, password, status) VALUES (%(username)s, %(email)s, %(password)s, %(status)s)]
+[parameters: {'username': 'cobacoba', 'email': 'agusang@dassasa.com', 'password': 'satudua', 'status': 1}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2019-08-26 13:01:31,814] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": {"username": "cobacoba", "email": "agusang@dassasa.com", "password": "satudua", "status": true}, "response": {"message": "Internal Server Error"}}
+[2019-08-26 13:01:36,655] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": {"username": "cobacoba", "email": "agusaaaaang@dassasa.com", "password": "satudua", "status": true}, "response": {"user_id": 23, "username": "cobacoba", "email": "agusaaaaang@dassasa.com", "password": "satudua", "status": true}}
+[2019-08-26 13:06:16,628] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/auth?", "request": {"username": "ammar", "password": "satudua"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjY3OTk1NzYsIm5iZiI6MTU2Njc5OTU3NiwianRpIjoiMzgwNzNhZTMtZDE4MS00MWM2LWFiYzEtYTEzYTIwOThkZjdiIiwiZXhwIjoxNTY2ODg1OTc2LCJpZGVudGl0eSI6eyJ1c2VybmFtZSI6ImFtbWFyIiwiZW1haWwiOiJhZ3VuZ0BkYXNhLmNvbSIsInN0YXR1cyI6dHJ1ZX0sImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjo0fX0.PVZ0huhY0Dh8yr30o_YCrqWps26JaQP0ptucSMqPV8Q", "data": {"username": "ammar", "email": "agung@dasa.com", "status": true}}}
+[2019-08-26 13:08:46,723] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/auth?", "request": {"username": "ammar", "password": "satudua"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjY3OTk3MjYsIm5iZiI6MTU2Njc5OTcyNiwianRpIjoiODMwNjI2NTMtOGZjMi00MWExLWFmZmQtMGI4NTA1NWE4ZDZkIiwiZXhwIjoxNTY2ODg2MTI2LCJpZGVudGl0eSI6eyJ1c2VybmFtZSI6ImFtbWFyIiwiZW1haWwiOiJhZ3VuZ0BkYXNhLmNvbSIsInN0YXR1cyI6dHJ1ZX0sImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjo0fX0.4yROjdQT3kXzOJ4lli2-I7d5gC8GEX5DEi-qH2TEw20", "data": {"username": "ammar", "email": "agung@dasa.com", "status": true}}}

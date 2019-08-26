@@ -1,0 +1,1071 @@
+[2019-08-20 01:25:15,663] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [POST]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`transaksi`, CONSTRAINT `transaksi_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `user` (`user_id`))')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 103, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/transaksi/resources.py", line 47, in post
+    db.session.commit()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 494, in commit
+    self._prepare_impl()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 473, in _prepare_impl
+    self.session.flush()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2459, in flush
+    self._flush(objects)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 153, in reraise
+    raise value
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2557, in _flush
+    flush_context.execute()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1138, in _emit_insert_statements
+    statement, params
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1452, 'Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`transaksi`, CONSTRAINT `transaksi_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `user` (`user_id`))')
+[SQL: INSERT INTO transaksi (user_id, item_id, total_qty, total_harga) VALUES (%(user_id)s, %(item_id)s, %(total_qty)s, %(total_harga)s)]
+[parameters: {'user_id': 11, 'item_id': '3', 'total_qty': '5', 'total_harga': '25000'}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2019-08-20 01:25:15,673] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/transaksi?", "request": {"user_id": 2, "item_id": 3, "total_qty": 5, "total_harga": 25000}, "response": {"message": "Internal Server Error"}}
+[2019-08-20 01:26:04,474] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [POST]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`transaksi`, CONSTRAINT `transaksi_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `user` (`user_id`))')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 103, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/transaksi/resources.py", line 47, in post
+    db.session.commit()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 494, in commit
+    self._prepare_impl()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 473, in _prepare_impl
+    self.session.flush()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2459, in flush
+    self._flush(objects)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 153, in reraise
+    raise value
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2557, in _flush
+    flush_context.execute()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1138, in _emit_insert_statements
+    statement, params
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1452, 'Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`transaksi`, CONSTRAINT `transaksi_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `user` (`user_id`))')
+[SQL: INSERT INTO transaksi (user_id, item_id, total_qty, total_harga) VALUES (%(user_id)s, %(item_id)s, %(total_qty)s, %(total_harga)s)]
+[parameters: {'user_id': 11, 'item_id': '3', 'total_qty': '5', 'total_harga': '25000'}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2019-08-20 01:26:04,480] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/transaksi?", "request": {"user_id": 2, "item_id": 3, "total_qty": 5, "total_harga": 25000}, "response": {"message": "Internal Server Error"}}
+[2019-08-20 01:27:29,004] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [POST]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`transaksi`, CONSTRAINT `transaksi_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `user` (`user_id`))')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 103, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/transaksi/resources.py", line 47, in post
+    db.session.commit()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 494, in commit
+    self._prepare_impl()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 473, in _prepare_impl
+    self.session.flush()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2459, in flush
+    self._flush(objects)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 153, in reraise
+    raise value
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2557, in _flush
+    flush_context.execute()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1138, in _emit_insert_statements
+    statement, params
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1452, 'Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`transaksi`, CONSTRAINT `transaksi_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `user` (`user_id`))')
+[SQL: INSERT INTO transaksi (user_id, item_id, total_qty, total_harga) VALUES (%(user_id)s, %(item_id)s, %(total_qty)s, %(total_harga)s)]
+[parameters: {'user_id': 11, 'item_id': '2', 'total_qty': '5', 'total_harga': '25000'}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2019-08-20 01:27:29,008] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/transaksi?", "request": {"user_id": 2, "item_id": 2, "total_qty": 5, "total_harga": 25000}, "response": {"message": "Internal Server Error"}}
+[2019-08-20 01:27:34,078] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [POST]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`transaksi`, CONSTRAINT `transaksi_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `user` (`user_id`))')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 103, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/transaksi/resources.py", line 47, in post
+    db.session.commit()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 494, in commit
+    self._prepare_impl()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 473, in _prepare_impl
+    self.session.flush()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2459, in flush
+    self._flush(objects)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 153, in reraise
+    raise value
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2557, in _flush
+    flush_context.execute()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1138, in _emit_insert_statements
+    statement, params
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1452, 'Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`transaksi`, CONSTRAINT `transaksi_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `user` (`user_id`))')
+[SQL: INSERT INTO transaksi (user_id, item_id, total_qty, total_harga) VALUES (%(user_id)s, %(item_id)s, %(total_qty)s, %(total_harga)s)]
+[parameters: {'user_id': 11, 'item_id': '2', 'total_qty': '5', 'total_harga': '25000'}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2019-08-20 01:27:34,080] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/transaksi?", "request": {"item_id": 2, "total_qty": 5, "total_harga": 25000}, "response": {"message": "Internal Server Error"}}
+[2019-08-20 01:27:49,145] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [OPTIONS]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2266, in process_response
+    response = handler(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py", line 98, in after_request
+    'response': json.loads(response.data.decode('utf-8'))
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-08-20 01:30:40,824] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [OPTIONS]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2266, in process_response
+    response = handler(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py", line 98, in after_request
+    'response': json.loads(response.data.decode('utf-8'))
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-08-20 01:33:18,926] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/auth?", "request": {"username": "babi", "password": "babi"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjYyMzk1OTgsIm5iZiI6MTU2NjIzOTU5OCwianRpIjoiZjgzOGEzODAtNDg5Ny00NWI4LWExYjktY2JiOTgwMTRlYzQxIiwiZXhwIjoxNTY2MzI1OTk4LCJpZGVudGl0eSI6eyJ1c2VybmFtZSI6ImJhYmkiLCJlbWFpbCI6ImJhYmkiLCJzdGF0dXMiOmZhbHNlfSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIiwidXNlcl9jbGFpbXMiOnsiaWQiOjEyfX0.GFK3zRawCtv93giT4INqjNEfpfBBxYo02OmBviE2ZPU", "data": {"username": "babi", "email": "babi", "status": false}}}
+[2019-08-20 01:33:30,329] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [POST]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`transaksi`, CONSTRAINT `transaksi_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `user` (`user_id`))')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 103, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/transaksi/resources.py", line 47, in post
+    db.session.commit()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 494, in commit
+    self._prepare_impl()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 473, in _prepare_impl
+    self.session.flush()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2459, in flush
+    self._flush(objects)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 153, in reraise
+    raise value
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2557, in _flush
+    flush_context.execute()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1138, in _emit_insert_statements
+    statement, params
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1452, 'Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`transaksi`, CONSTRAINT `transaksi_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `user` (`user_id`))')
+[SQL: INSERT INTO transaksi (user_id, item_id, total_qty, total_harga) VALUES (%(user_id)s, %(item_id)s, %(total_qty)s, %(total_harga)s)]
+[parameters: {'user_id': 12, 'item_id': '2', 'total_qty': '5', 'total_harga': '25000'}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2019-08-20 01:33:30,348] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/transaksi?", "request": {"item_id": 2, "total_qty": 5, "total_harga": 25000}, "response": {"message": "Internal Server Error"}}
+[2019-08-20 01:33:33,848] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [POST]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`transaksi`, CONSTRAINT `transaksi_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `user` (`user_id`))')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 103, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/transaksi/resources.py", line 47, in post
+    db.session.commit()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 494, in commit
+    self._prepare_impl()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 473, in _prepare_impl
+    self.session.flush()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2459, in flush
+    self._flush(objects)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 153, in reraise
+    raise value
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2557, in _flush
+    flush_context.execute()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1138, in _emit_insert_statements
+    statement, params
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1452, 'Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`transaksi`, CONSTRAINT `transaksi_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `user` (`user_id`))')
+[SQL: INSERT INTO transaksi (user_id, item_id, total_qty, total_harga) VALUES (%(user_id)s, %(item_id)s, %(total_qty)s, %(total_harga)s)]
+[parameters: {'user_id': 12, 'item_id': '2', 'total_qty': '5', 'total_harga': '25000'}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2019-08-20 01:33:33,852] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/transaksi?", "request": {"item_id": 2, "total_qty": 5, "total_harga": 25000}, "response": {"message": "Internal Server Error"}}
+[2019-08-20 01:33:38,185] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/transaksi?", "request": {"item_id": 5, "total_qty": 5, "total_harga": 25000}, "response": {"transaksi_id": 19, "user_id": 12, "item_id": 5, "total_qty": 5, "total_harga": 25000}}
+[2019-08-20 01:34:04,570] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/transaksi?", "request": {"item_id": 1, "total_qty": 5, "total_harga": 25000}, "response": {"transaksi_id": 20, "user_id": 12, "item_id": 1, "total_qty": 5, "total_harga": 25000}}
+[2019-08-20 01:35:39,473] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item/2?", "request": {}, "response": {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}}
+[2019-08-20 01:35:51,704] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item/2?", "request": {}, "response": {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}}
+[2019-08-20 01:36:02,461] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/auth?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-20 01:36:02,492] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/auth?", "request": {"username": "", "password": ""}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjYyMzk3NjIsIm5iZiI6MTU2NjIzOTc2MiwianRpIjoiOWI1ZGNiZDEtNDAxNi00ZTRmLTk1NjYtODhiZTcyMzJmOGYwIiwiZXhwIjoxNTY2MzI2MTYyLCJpZGVudGl0eSI6eyJ1c2VybmFtZSI6IiIsImVtYWlsIjoiIiwic3RhdHVzIjpmYWxzZX0sImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjo3fX0.9t3x30g7gfYWRYFtEFUnxkLdK2hWtujIxfCbuwgYKFM", "data": {"username": "", "email": "", "status": false}}}
+[2019-08-20 01:36:02,646] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-20 01:36:02,663] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user?", "request": {}, "response": {"user_id": 7, "username": "", "email": "", "password": "", "status": false}}
+[2019-08-20 01:36:10,759] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item?", "request": {}, "response": [{"item_id": 1, "nama": "Berbagi 50.000", "detail": "Dengan donasi 50000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinOQlC5wvz8F21231_vTtpHAlU6NUKZz9M8Q2Ga9VWDdvnNCz", "harga": 50000, "total": 1}, {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}, {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}, {"item_id": 4, "nama": "Berbagi 1000", "detail": "Dengan donasi 1000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 1000, "total": 1}, {"item_id": 5, "nama": "Berbagi 2000", "detail": "Dengan donasi 2000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 2000, "total": 1}]}
+[2019-08-20 01:36:12,382] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item/2?", "request": {}, "response": {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}}
+[2019-08-20 01:36:15,675] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item/2?", "request": {}, "response": {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}}
+[2019-08-20 01:36:17,420] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item/2?", "request": {}, "response": {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}}
+[2019-08-20 01:36:18,589] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [OPTIONS]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2266, in process_response
+    response = handler(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py", line 98, in after_request
+    'response': json.loads(response.data.decode('utf-8'))
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-08-20 01:37:09,545] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 292, in _decode_jwt_from_request
+    raise NoAuthorizationError(errors[0])
+flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
+[2019-08-20 01:37:09,546] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/transaksi?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-20 01:38:41,684] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [OPTIONS]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2266, in process_response
+    response = handler(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py", line 98, in after_request
+    'response': json.loads(response.data.decode('utf-8'))
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-08-20 01:39:13,625] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [OPTIONS]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2266, in process_response
+    response = handler(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py", line 98, in after_request
+    'response': json.loads(response.data.decode('utf-8'))
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-08-20 01:40:03,791] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [OPTIONS]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2266, in process_response
+    response = handler(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py", line 98, in after_request
+    'response': json.loads(response.data.decode('utf-8'))
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-08-20 01:45:02,553] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item/2?", "request": {}, "response": {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}}
+[2019-08-20 01:45:09,421] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [OPTIONS]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2266, in process_response
+    response = handler(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py", line 98, in after_request
+    'response': json.loads(response.data.decode('utf-8'))
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-08-20 01:47:16,020] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [OPTIONS]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2266, in process_response
+    response = handler(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py", line 98, in after_request
+    'response': json.loads(response.data.decode('utf-8'))
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-08-20 01:47:33,356] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/auth?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-20 01:47:33,370] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/auth?", "request": {"username": "", "password": ""}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjYyNDA0NTMsIm5iZiI6MTU2NjI0MDQ1MywianRpIjoiN2JkMGRiNzItNWJkYS00OTY3LWFlNzEtYjExMTM1NWI3ZmFmIiwiZXhwIjoxNTY2MzI2ODUzLCJpZGVudGl0eSI6eyJ1c2VybmFtZSI6IiIsImVtYWlsIjoiIiwic3RhdHVzIjpmYWxzZX0sImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjo3fX0.J8k0Es4E1NdHOi1wWicZicsVe78Evz9WK-iPPINU0SM", "data": {"username": "", "email": "", "status": false}}}
+[2019-08-20 01:47:33,700] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-20 01:47:33,715] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user?", "request": {}, "response": {"user_id": 7, "username": "", "email": "", "password": "", "status": false}}
+[2019-08-20 01:47:37,030] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item?", "request": {}, "response": [{"item_id": 1, "nama": "Berbagi 50.000", "detail": "Dengan donasi 50000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinOQlC5wvz8F21231_vTtpHAlU6NUKZz9M8Q2Ga9VWDdvnNCz", "harga": 50000, "total": 1}, {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}, {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}, {"item_id": 4, "nama": "Berbagi 1000", "detail": "Dengan donasi 1000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 1000, "total": 1}, {"item_id": 5, "nama": "Berbagi 2000", "detail": "Dengan donasi 2000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 2000, "total": 1}]}
+[2019-08-20 01:47:38,124] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item/3?", "request": {}, "response": {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}}
+[2019-08-20 01:47:40,377] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item/3?", "request": {}, "response": {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}}
+[2019-08-20 01:47:41,327] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item/3?", "request": {}, "response": {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}}
+[2019-08-20 01:47:44,206] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [OPTIONS]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2266, in process_response
+    response = handler(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py", line 98, in after_request
+    'response': json.loads(response.data.decode('utf-8'))
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-08-20 01:49:03,415] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [OPTIONS]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2266, in process_response
+    response = handler(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py", line 98, in after_request
+    'response': json.loads(response.data.decode('utf-8'))
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-08-20 01:51:45,457] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [OPTIONS]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2266, in process_response
+    response = handler(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py", line 98, in after_request
+    'response': json.loads(response.data.decode('utf-8'))
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-08-20 01:51:51,507] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [OPTIONS]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2266, in process_response
+    response = handler(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py", line 98, in after_request
+    'response': json.loads(response.data.decode('utf-8'))
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-08-20 01:51:53,607] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [OPTIONS]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2266, in process_response
+    response = handler(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py", line 98, in after_request
+    'response': json.loads(response.data.decode('utf-8'))
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-08-20 01:52:46,978] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [OPTIONS]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2266, in process_response
+    response = handler(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py", line 98, in after_request
+    'response': json.loads(response.data.decode('utf-8'))
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-08-20 01:53:22,202] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [OPTIONS]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 2266, in process_response
+    response = handler(response)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py", line 98, in after_request
+    'response': json.loads(response.data.decode('utf-8'))
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-08-20 01:53:32,675] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/transaksi?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-20 01:53:32,845] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /transaksi [POST]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`transaksi`, CONSTRAINT `transaksi_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `user` (`user_id`))')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 103, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/transaksi/resources.py", line 47, in post
+    db.session.commit()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 494, in commit
+    self._prepare_impl()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 473, in _prepare_impl
+    self.session.flush()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2459, in flush
+    self._flush(objects)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 153, in reraise
+    raise value
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2557, in _flush
+    flush_context.execute()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1138, in _emit_insert_statements
+    statement, params
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1452, 'Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`transaksi`, CONSTRAINT `transaksi_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `user` (`user_id`))')
+[SQL: INSERT INTO transaksi (user_id, item_id, total_qty, total_harga) VALUES (%(user_id)s, %(item_id)s, %(total_qty)s, %(total_harga)s)]
+[parameters: {'user_id': 7, 'item_id': '3', 'total_qty': '3', 'total_harga': '15000'}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2019-08-20 01:53:32,862] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/transaksi?", "request": {"item_id": 3, "total_qty": 3, "total_harga": 15000}, "response": {"message": "Internal Server Error"}}
+[2019-08-20 01:53:33,992] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/transaksi?", "request": null, "response": {"Success": "Ok"}}

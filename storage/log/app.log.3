@@ -1,0 +1,634 @@
+[2019-08-25 16:31:10,507] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:31:10,512] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:31:29,424] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:31:29,507] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:31:29,508] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:31:45,886] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/auth?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:31:45,904] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/auth?", "request": {"username": "ammar", "password": "satudua"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjY3MjU1MDUsIm5iZiI6MTU2NjcyNTUwNSwianRpIjoiOTU1YzU0MDEtNjFmYi00MTRmLThkYTEtZDMzNDk5NzEwZDBjIiwiZXhwIjoxNTY2ODExOTA1LCJpZGVudGl0eSI6eyJ1c2VybmFtZSI6ImFtbWFyIiwiZW1haWwiOiJhZ3VuZ0BkYXNhLmNvbSIsInN0YXR1cyI6dHJ1ZX0sImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjo0fX0.7X8fa-UDwRBLmy-1coA765zz36KR_2CCX1UtVotNx7Y", "data": {"username": "ammar", "email": "agung@dasa.com", "status": true}}}
+[2019-08-25 16:31:46,170] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item?", "request": {}, "response": [{"item_id": 1, "nama": "Berbagi 50.000", "detail": "Dengan donasi 50000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinOQlC5wvz8F21231_vTtpHAlU6NUKZz9M8Q2Ga9VWDdvnNCz", "harga": 50000, "total": 1}, {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}, {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}, {"item_id": 4, "nama": "Berbagi 1000", "detail": "Dengan donasi 1000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 1000, "total": 1}, {"item_id": 5, "nama": "Berbagi 2000", "detail": "Dengan donasi 2000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 2000, "total": 1}, {"item_id": 10, "nama": "dsad", "detail": "dsadsa", "url": "dsadsa", "harga": 555, "total": 5}, {"item_id": 11, "nama": "aaa", "detail": "aaa", "url": "aaa", "harga": 111, "total": 1}, {"item_id": 12, "nama": "111", "detail": "111", "url": "11", "harga": 11, "total": 11}]}
+[2019-08-25 16:31:57,433] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:31:57,454] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user?", "request": {}, "response": {"user_id": 4, "username": "ammar", "email": "agung@dasa.com", "password": "satudua", "status": true}}
+[2019-08-25 16:32:06,774] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:32:06,855] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user?", "request": {}, "response": {"user_id": 4, "username": "ammar", "email": "agung@dasa.com", "password": "satudua", "status": true}}
+[2019-08-25 16:32:21,101] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item?", "request": {}, "response": [{"item_id": 1, "nama": "Berbagi 50.000", "detail": "Dengan donasi 50000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinOQlC5wvz8F21231_vTtpHAlU6NUKZz9M8Q2Ga9VWDdvnNCz", "harga": 50000, "total": 1}, {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}, {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}, {"item_id": 4, "nama": "Berbagi 1000", "detail": "Dengan donasi 1000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 1000, "total": 1}, {"item_id": 5, "nama": "Berbagi 2000", "detail": "Dengan donasi 2000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 2000, "total": 1}, {"item_id": 10, "nama": "dsad", "detail": "dsadsa", "url": "dsadsa", "harga": 555, "total": 5}, {"item_id": 11, "nama": "aaa", "detail": "aaa", "url": "aaa", "harga": 111, "total": 1}, {"item_id": 12, "nama": "111", "detail": "111", "url": "11", "harga": 11, "total": 11}]}
+[2019-08-25 16:33:26,521] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:33:26,535] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:33:26,537] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:33:27,750] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item?", "request": {}, "response": [{"item_id": 1, "nama": "Berbagi 50.000", "detail": "Dengan donasi 50000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinOQlC5wvz8F21231_vTtpHAlU6NUKZz9M8Q2Ga9VWDdvnNCz", "harga": 50000, "total": 1}, {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}, {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}, {"item_id": 4, "nama": "Berbagi 1000", "detail": "Dengan donasi 1000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 1000, "total": 1}, {"item_id": 5, "nama": "Berbagi 2000", "detail": "Dengan donasi 2000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 2000, "total": 1}, {"item_id": 10, "nama": "dsad", "detail": "dsadsa", "url": "dsadsa", "harga": 555, "total": 5}, {"item_id": 11, "nama": "aaa", "detail": "aaa", "url": "aaa", "harga": 111, "total": 1}, {"item_id": 12, "nama": "111", "detail": "111", "url": "11", "harga": 11, "total": 11}]}
+[2019-08-25 16:33:35,234] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:33:35,331] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:33:35,332] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:33:43,945] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:33:43,967] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:33:43,968] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:33:57,382] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item?", "request": {}, "response": [{"item_id": 1, "nama": "Berbagi 50.000", "detail": "Dengan donasi 50000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinOQlC5wvz8F21231_vTtpHAlU6NUKZz9M8Q2Ga9VWDdvnNCz", "harga": 50000, "total": 1}, {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}, {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}, {"item_id": 4, "nama": "Berbagi 1000", "detail": "Dengan donasi 1000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 1000, "total": 1}, {"item_id": 5, "nama": "Berbagi 2000", "detail": "Dengan donasi 2000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 2000, "total": 1}, {"item_id": 10, "nama": "dsad", "detail": "dsadsa", "url": "dsadsa", "harga": 555, "total": 5}, {"item_id": 11, "nama": "aaa", "detail": "aaa", "url": "aaa", "harga": 111, "total": 1}, {"item_id": 12, "nama": "111", "detail": "111", "url": "11", "harga": 11, "total": 11}]}
+[2019-08-25 16:34:09,653] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:34:09,668] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:34:09,669] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:34:19,919] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item?", "request": {}, "response": [{"item_id": 1, "nama": "Berbagi 50.000", "detail": "Dengan donasi 50000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinOQlC5wvz8F21231_vTtpHAlU6NUKZz9M8Q2Ga9VWDdvnNCz", "harga": 50000, "total": 1}, {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}, {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}, {"item_id": 4, "nama": "Berbagi 1000", "detail": "Dengan donasi 1000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 1000, "total": 1}, {"item_id": 5, "nama": "Berbagi 2000", "detail": "Dengan donasi 2000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 2000, "total": 1}, {"item_id": 10, "nama": "dsad", "detail": "dsadsa", "url": "dsadsa", "harga": 555, "total": 5}, {"item_id": 11, "nama": "aaa", "detail": "aaa", "url": "aaa", "harga": 111, "total": 1}, {"item_id": 12, "nama": "111", "detail": "111", "url": "11", "harga": 11, "total": 11}]}
+[2019-08-25 16:35:38,350] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:35:38,361] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:35:38,362] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:35:39,722] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item?", "request": {}, "response": [{"item_id": 1, "nama": "Berbagi 50.000", "detail": "Dengan donasi 50000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinOQlC5wvz8F21231_vTtpHAlU6NUKZz9M8Q2Ga9VWDdvnNCz", "harga": 50000, "total": 1}, {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}, {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}, {"item_id": 4, "nama": "Berbagi 1000", "detail": "Dengan donasi 1000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 1000, "total": 1}, {"item_id": 5, "nama": "Berbagi 2000", "detail": "Dengan donasi 2000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 2000, "total": 1}, {"item_id": 10, "nama": "dsad", "detail": "dsadsa", "url": "dsadsa", "harga": 555, "total": 5}, {"item_id": 11, "nama": "aaa", "detail": "aaa", "url": "aaa", "harga": 111, "total": 1}, {"item_id": 12, "nama": "111", "detail": "111", "url": "11", "harga": 11, "total": 11}]}
+[2019-08-25 16:35:51,607] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:35:51,614] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:35:51,615] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:35:53,677] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item?", "request": {}, "response": [{"item_id": 1, "nama": "Berbagi 50.000", "detail": "Dengan donasi 50000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinOQlC5wvz8F21231_vTtpHAlU6NUKZz9M8Q2Ga9VWDdvnNCz", "harga": 50000, "total": 1}, {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}, {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}, {"item_id": 4, "nama": "Berbagi 1000", "detail": "Dengan donasi 1000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 1000, "total": 1}, {"item_id": 5, "nama": "Berbagi 2000", "detail": "Dengan donasi 2000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 2000, "total": 1}, {"item_id": 10, "nama": "dsad", "detail": "dsadsa", "url": "dsadsa", "harga": 555, "total": 5}, {"item_id": 11, "nama": "aaa", "detail": "aaa", "url": "aaa", "harga": 111, "total": 1}, {"item_id": 12, "nama": "111", "detail": "111", "url": "11", "harga": 11, "total": 11}]}
+[2019-08-25 16:36:17,147] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:36:17,157] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:36:17,158] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:36:18,690] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item?", "request": {}, "response": [{"item_id": 1, "nama": "Berbagi 50.000", "detail": "Dengan donasi 50000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinOQlC5wvz8F21231_vTtpHAlU6NUKZz9M8Q2Ga9VWDdvnNCz", "harga": 50000, "total": 1}, {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}, {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}, {"item_id": 4, "nama": "Berbagi 1000", "detail": "Dengan donasi 1000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 1000, "total": 1}, {"item_id": 5, "nama": "Berbagi 2000", "detail": "Dengan donasi 2000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 2000, "total": 1}, {"item_id": 10, "nama": "dsad", "detail": "dsadsa", "url": "dsadsa", "harga": 555, "total": 5}, {"item_id": 11, "nama": "aaa", "detail": "aaa", "url": "aaa", "harga": 111, "total": 1}, {"item_id": 12, "nama": "111", "detail": "111", "url": "11", "harga": 11, "total": 11}]}
+[2019-08-25 16:36:20,547] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:36:20,559] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:36:20,560] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:36:43,261] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:36:43,267] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:36:43,269] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:36:45,536] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:36:45,550] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:36:45,553] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:37:10,306] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/auth?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:37:10,324] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/auth?", "request": {"username": "ammar", "password": "satudua"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjY3MjU4MzAsIm5iZiI6MTU2NjcyNTgzMCwianRpIjoiMjNkMWEyMTctNDQ3MS00ZTJkLThlMjAtNWIxYjYwZjdhMGU1IiwiZXhwIjoxNTY2ODEyMjMwLCJpZGVudGl0eSI6eyJ1c2VybmFtZSI6ImFtbWFyIiwiZW1haWwiOiJhZ3VuZ0BkYXNhLmNvbSIsInN0YXR1cyI6dHJ1ZX0sImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjo0fX0.WKfLhravamihBXKDtjEGqLFB-TgWeH4VUbQEnJMykuU", "data": {"username": "ammar", "email": "agung@dasa.com", "status": true}}}
+[2019-08-25 16:37:10,638] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item?", "request": {}, "response": [{"item_id": 1, "nama": "Berbagi 50.000", "detail": "Dengan donasi 50000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinOQlC5wvz8F21231_vTtpHAlU6NUKZz9M8Q2Ga9VWDdvnNCz", "harga": 50000, "total": 1}, {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}, {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}, {"item_id": 4, "nama": "Berbagi 1000", "detail": "Dengan donasi 1000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 1000, "total": 1}, {"item_id": 5, "nama": "Berbagi 2000", "detail": "Dengan donasi 2000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 2000, "total": 1}, {"item_id": 10, "nama": "dsad", "detail": "dsadsa", "url": "dsadsa", "harga": 555, "total": 5}, {"item_id": 11, "nama": "aaa", "detail": "aaa", "url": "aaa", "harga": 111, "total": 1}, {"item_id": 12, "nama": "111", "detail": "111", "url": "11", "harga": 11, "total": 11}]}
+[2019-08-25 16:37:13,839] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:37:13,851] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user?", "request": {}, "response": {"user_id": 4, "username": "ammar", "email": "agung@dasa.com", "password": "satudua", "status": true}}
+[2019-08-25 16:37:26,189] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item?", "request": {}, "response": [{"item_id": 1, "nama": "Berbagi 50.000", "detail": "Dengan donasi 50000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinOQlC5wvz8F21231_vTtpHAlU6NUKZz9M8Q2Ga9VWDdvnNCz", "harga": 50000, "total": 1}, {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}, {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}, {"item_id": 4, "nama": "Berbagi 1000", "detail": "Dengan donasi 1000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 1000, "total": 1}, {"item_id": 5, "nama": "Berbagi 2000", "detail": "Dengan donasi 2000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 2000, "total": 1}, {"item_id": 10, "nama": "dsad", "detail": "dsadsa", "url": "dsadsa", "harga": 555, "total": 5}, {"item_id": 11, "nama": "aaa", "detail": "aaa", "url": "aaa", "harga": 111, "total": 1}, {"item_id": 12, "nama": "111", "detail": "111", "url": "11", "harga": 11, "total": 11}]}
+[2019-08-25 16:37:26,876] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:37:26,886] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user?", "request": {}, "response": {"user_id": 4, "username": "ammar", "email": "agung@dasa.com", "password": "satudua", "status": true}}
+[2019-08-25 16:38:01,579] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:38:01,584] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:38:01,587] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:38:05,145] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:38:05,157] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:38:05,158] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:38:12,974] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:38:12,983] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:38:12,984] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:38:13,746] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:38:13,803] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:38:13,804] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:38:14,320] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item?", "request": {}, "response": [{"item_id": 1, "nama": "Berbagi 50.000", "detail": "Dengan donasi 50000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinOQlC5wvz8F21231_vTtpHAlU6NUKZz9M8Q2Ga9VWDdvnNCz", "harga": 50000, "total": 1}, {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}, {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}, {"item_id": 4, "nama": "Berbagi 1000", "detail": "Dengan donasi 1000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 1000, "total": 1}, {"item_id": 5, "nama": "Berbagi 2000", "detail": "Dengan donasi 2000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 2000, "total": 1}, {"item_id": 10, "nama": "dsad", "detail": "dsadsa", "url": "dsadsa", "harga": 555, "total": 5}, {"item_id": 11, "nama": "aaa", "detail": "aaa", "url": "aaa", "harga": 111, "total": 1}, {"item_id": 12, "nama": "111", "detail": "111", "url": "11", "harga": 11, "total": 11}]}
+[2019-08-25 16:38:15,031] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:38:15,143] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:38:15,144] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:38:32,722] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/auth?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:38:32,742] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/auth?", "request": {"username": "", "password": ""}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjY3MjU5MTIsIm5iZiI6MTU2NjcyNTkxMiwianRpIjoiN2Y3YWEzYmYtM2M4NS00NTU4LWEwMGEtMGM3ZWQ2YTkwMjY1IiwiZXhwIjoxNTY2ODEyMzEyLCJpZGVudGl0eSI6eyJ1c2VybmFtZSI6IiIsImVtYWlsIjoiIiwic3RhdHVzIjpmYWxzZX0sImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjo3fX0.p2XWDIkm5UACOdzlLkNSjiQGVHAoJ4a5UpEX3g5WvnQ", "data": {"username": "", "email": "", "status": false}}}
+[2019-08-25 16:38:32,896] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item?", "request": {}, "response": [{"item_id": 1, "nama": "Berbagi 50.000", "detail": "Dengan donasi 50000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinOQlC5wvz8F21231_vTtpHAlU6NUKZz9M8Q2Ga9VWDdvnNCz", "harga": 50000, "total": 1}, {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}, {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}, {"item_id": 4, "nama": "Berbagi 1000", "detail": "Dengan donasi 1000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 1000, "total": 1}, {"item_id": 5, "nama": "Berbagi 2000", "detail": "Dengan donasi 2000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 2000, "total": 1}, {"item_id": 10, "nama": "dsad", "detail": "dsadsa", "url": "dsadsa", "harga": 555, "total": 5}, {"item_id": 11, "nama": "aaa", "detail": "aaa", "url": "aaa", "harga": 111, "total": 1}, {"item_id": 12, "nama": "111", "detail": "111", "url": "11", "harga": 11, "total": 11}]}
+[2019-08-25 16:38:34,609] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:38:34,669] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user?", "request": {}, "response": {"user_id": 7, "username": "", "email": "", "password": "", "status": false}}
+[2019-08-25 16:39:51,131] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:39:51,146] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:39:51,147] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:40:19,528] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:40:19,532] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:40:19,534] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:40:23,606] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:40:23,690] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:40:23,691] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:41:00,100] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:41:00,105] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:41:00,106] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:41:03,392] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item?", "request": {}, "response": [{"item_id": 1, "nama": "Berbagi 50.000", "detail": "Dengan donasi 50000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinOQlC5wvz8F21231_vTtpHAlU6NUKZz9M8Q2Ga9VWDdvnNCz", "harga": 50000, "total": 1}, {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}, {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}, {"item_id": 4, "nama": "Berbagi 1000", "detail": "Dengan donasi 1000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 1000, "total": 1}, {"item_id": 5, "nama": "Berbagi 2000", "detail": "Dengan donasi 2000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 2000, "total": 1}, {"item_id": 10, "nama": "dsad", "detail": "dsadsa", "url": "dsadsa", "harga": 555, "total": 5}, {"item_id": 11, "nama": "aaa", "detail": "aaa", "url": "aaa", "harga": 111, "total": 1}, {"item_id": 12, "nama": "111", "detail": "111", "url": "11", "harga": 11, "total": 11}]}
+[2019-08-25 16:41:03,960] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:41:03,976] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:41:03,977] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:41:06,943] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:41:06,953] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:41:06,954] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:41:07,508] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:41:07,537] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:41:07,537] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:41:07,934] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item?", "request": {}, "response": [{"item_id": 1, "nama": "Berbagi 50.000", "detail": "Dengan donasi 50000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinOQlC5wvz8F21231_vTtpHAlU6NUKZz9M8Q2Ga9VWDdvnNCz", "harga": 50000, "total": 1}, {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}, {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}, {"item_id": 4, "nama": "Berbagi 1000", "detail": "Dengan donasi 1000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 1000, "total": 1}, {"item_id": 5, "nama": "Berbagi 2000", "detail": "Dengan donasi 2000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 2000, "total": 1}, {"item_id": 10, "nama": "dsad", "detail": "dsadsa", "url": "dsadsa", "harga": 555, "total": 5}, {"item_id": 11, "nama": "aaa", "detail": "aaa", "url": "aaa", "harga": 111, "total": 1}, {"item_id": 12, "nama": "111", "detail": "111", "url": "11", "harga": 11, "total": 11}]}
+[2019-08-25 16:41:22,358] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:41:22,377] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
+[2019-08-25 16:41:22,378] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2019-08-25 16:41:34,013] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/auth?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:41:34,036] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/auth?", "request": {"username": "ammar", "password": "satudua"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjY3MjYwOTQsIm5iZiI6MTU2NjcyNjA5NCwianRpIjoiNjg0M2Y0NDQtYThiMy00OWRiLWE1NzgtOTU3MmZmYjJlNzZlIiwiZXhwIjoxNTY2ODEyNDk0LCJpZGVudGl0eSI6eyJ1c2VybmFtZSI6ImFtbWFyIiwiZW1haWwiOiJhZ3VuZ0BkYXNhLmNvbSIsInN0YXR1cyI6dHJ1ZX0sImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjo0fX0.6MP36JGuOFsTrEnSqNSySdYuDnM8Xgjb4ytI5FkXkN8", "data": {"username": "ammar", "email": "agung@dasa.com", "status": true}}}
+[2019-08-25 16:41:34,308] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item?", "request": {}, "response": [{"item_id": 1, "nama": "Berbagi 50.000", "detail": "Dengan donasi 50000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinOQlC5wvz8F21231_vTtpHAlU6NUKZz9M8Q2Ga9VWDdvnNCz", "harga": 50000, "total": 1}, {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}, {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}, {"item_id": 4, "nama": "Berbagi 1000", "detail": "Dengan donasi 1000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 1000, "total": 1}, {"item_id": 5, "nama": "Berbagi 2000", "detail": "Dengan donasi 2000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 2000, "total": 1}, {"item_id": 10, "nama": "dsad", "detail": "dsadsa", "url": "dsadsa", "harga": 555, "total": 5}, {"item_id": 11, "nama": "aaa", "detail": "aaa", "url": "aaa", "harga": 111, "total": 1}, {"item_id": 12, "nama": "111", "detail": "111", "url": "11", "harga": 11, "total": 11}]}
+[2019-08-25 16:41:37,658] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:41:37,684] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user?", "request": {}, "response": {"user_id": 4, "username": "ammar", "email": "agung@dasa.com", "password": "satudua", "status": true}}
+[2019-08-25 16:43:00,214] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/auth?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:43:00,244] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/auth?", "request": {"username": "", "password": ""}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjY3MjYxODAsIm5iZiI6MTU2NjcyNjE4MCwianRpIjoiNzVkNjZhMDMtMGRkMi00MDFhLTg1ZDktYmZhNGRhMzlmMzQ0IiwiZXhwIjoxNTY2ODEyNTgwLCJpZGVudGl0eSI6eyJ1c2VybmFtZSI6IiIsImVtYWlsIjoiIiwic3RhdHVzIjpmYWxzZX0sImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjo3fX0.ljNjebj8dxN5URtq01Eic2jW5o1m5irwDbVoZ4Di53A", "data": {"username": "", "email": "", "status": false}}}
+[2019-08-25 16:43:00,428] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:82 WARNING - REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/item?", "request": {}, "response": [{"item_id": 1, "nama": "Berbagi 50.000", "detail": "Dengan donasi 50000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinOQlC5wvz8F21231_vTtpHAlU6NUKZz9M8Q2Ga9VWDdvnNCz", "harga": 50000, "total": 1}, {"item_id": 2, "nama": "Berbagi 10000", "detail": "Dengan donasi 10000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg", "harga": 10000, "total": 1}, {"item_id": 3, "nama": "Berbagi 5000", "detail": "Dengan donasi 5000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://img.freepik.com/free-vector/money-bag-background-design_1270-41.jpg?size=338&ext=jpg", "harga": 5000, "total": 1}, {"item_id": 4, "nama": "Berbagi 1000", "detail": "Dengan donasi 1000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 1000, "total": 1}, {"item_id": 5, "nama": "Berbagi 2000", "detail": "Dengan donasi 2000 rupiah, sahabat mampu berbagi kebahagian kepada orang-orang sekitar kita yang membutuhkan.", "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJEM3XWozyUAIxM74VAd7jaA4RcWhGxXzBNcR88IzGlgygGcG", "harga": 2000, "total": 1}, {"item_id": 10, "nama": "dsad", "detail": "dsadsa", "url": "dsadsa", "harga": 555, "total": 5}, {"item_id": 11, "nama": "aaa", "detail": "aaa", "url": "aaa", "harga": 111, "total": 1}, {"item_id": 12, "nama": "111", "detail": "111", "url": "11", "harga": 11, "total": 11}]}
+[2019-08-25 16:43:25,082] {/home/alta4/Documents/E-Com/APIEc/envEcom/Baru/blueprints/__init__.py}:90 WARNING - REQUEST_LOG	{"uri": "/user?", "request": null, "response": {"Success": "Ok"}}
+[2019-08-25 16:43:25,129] {/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py}:1891 ERROR - Exception on /user [GET]
+Traceback (most recent call last):
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 102, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 31, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 272, in _decode_jwt_from_request
+    encoded_token, csrf_token = get_encoded_token_function()
+  File "/home/alta4/Documents/E-Com/APIEc/envEcom/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 191, in _decode_jwt_from_headers
+    raise InvalidHeaderError(msg)
+flask_jwt_extended.exceptions.InvalidHeaderError: Bad Authorization header. Expected value 'Bearer <JWT>'
