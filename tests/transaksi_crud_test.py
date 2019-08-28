@@ -10,7 +10,7 @@ class TestTransCrud():
         data = {
             'user_id': 2,
             'item_id': 1,
-            'nama_item': 'testting1',
+            'nama_item': 'testtingfix11',
             'total_qty': 10,
             'total_harga': 10,
             'tanggal': "Aug 28 2019",
@@ -24,7 +24,7 @@ class TestTransCrud():
         TestTransCrud.var = res_json['user_id']
         assert res.status_code == 200
 
-    def test_User_invalid_post_name(self, user):
+    def test_transaksi_invalid_post_name(self, user):
         token = create_token_admin()
         data = {
             'user_id': 2,
@@ -58,44 +58,48 @@ class TestTransCrud():
         res_json = json.loads(res.data)
         assert res.status_code == 404
 
+    def test_transaksi_valid_put_token(self, user):
+        token = create_token_admin()
+        data = {
+            'user_id': 2,
+            'item_id': 1,
+            'nama_item': 'gantitesting1',
+            'total_qty': 10,
+            'total_harga': 10,
+            'tanggal': "Aug 28 2019",
+        }
+        res = user.put('/transaki/'+str(TestTransCrud.var),
+                       headers={'Authorization': 'Bearer ' + token})
 
-#     def test_user_valid_put_token(self, user):
-#         token = create_token_admin()
-#         data = {
-#             'username': 'ganti11',
-#             'email': 'gantiemail111',
-#             'password': 'satudua11',
-#             'status': True,
-#         }
-#         res = user.put('/user/'+str(TestUserCrud.var),
-#                        headers={'Authorization': 'Bearer ' + token})
+        res_json = json.loads(res.data)
+        assert res.status_code == 404
 
-#         res_json = json.loads(res.data)
-#         assert res.status_code == 400
+    def test_transaksi_invalid_put_token(self, user):
+        token = create_token_admin()
+        data = {
+            'user_id': 2,
+            'item_id': 1,
+            'nama_item': 'gantitesting1',
+            'total_qty': 10,
+        }
+        res = user.put('/transaksi/2',
+                       headers={'Authorization': 'Bearer ' + token})
 
-#     def test_user_invalid_put_token(self, user):
-#         token = create_token_admin()
-#         data = {
-#             'username': 'SECRET10',
-#         }
-#         res = user.put('/user/15',
-#                        headers={'Authorization': 'Bearer ' + token})
+        res_json = json.loads(res.data)
+        assert res.status_code == 400
 
-#         res_json = json.loads(res.data)
-#         assert res.status_code == 400
+    def test_transaksi_valid_delete_token(self, user):
+        token = create_token_admin()
+        res = user.delete('/transaksi/'+str(TestTransCrud.var),
+                          headers={'Authorization': 'Bearer ' + token})
 
-#     def test_user_valid_delete_token(self, user):
-#         token = create_token_admin()
-#         res = user.delete('/user/'+str(TestUserCrud.var),
-#                           headers={'Authorization': 'Bearer ' + token})
+        res_json = json.loads(res.data)
+        assert res.status_code == 500
 
-#         res_json = json.loads(res.data)
-#         assert res.status_code == 200
+    def test_transaksi_invalid_delete_token(self, user):
+        token = create_token_admin()
+        res = user.delete('/transaki/120',
+                          headers={'Authorization': 'Bearer ' + token})
 
-#     def test_user_invalid_delete_token(self, user):
-#         token = create_token_admin()
-#         res = user.delete('/user/120',
-#                           headers={'Authorization': 'Bearer ' + token})
-
-#         res_json = json.loads(res.data)
-#         assert res.status_code == 404
+        res_json = json.loads(res.data)
+        assert res.status_code == 404

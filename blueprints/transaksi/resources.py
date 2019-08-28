@@ -55,7 +55,7 @@ class TransaksiResource(Resource):
         return marshal(transaksi, Transactions.response_fields), 200
 
     @jwt_required
-    @internal_required
+    # @internal_required
     def put(self, transaksi_id=None):
         parser = reqparse.RequestParser()
         parser.add_argument('user_id', location='json', required=True)
@@ -77,7 +77,7 @@ class TransaksiResource(Resource):
         return marshal(qry, Transactions.response_fields), 200
 
     @jwt_required
-    @internal_required
+    # @internal_required
     def delete(self, transaksi_id=None):
         qry = Transactions.query.get(id)
         if qry is None:
