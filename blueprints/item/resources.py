@@ -19,12 +19,12 @@ class ItemResource(Resource):
     def __init__(self):
         pass
 
-    def options(self):
+    def options(self, item_id=None):
         return {"Success": "Ok"}, 200
 
     # @jwt_required
     # @internal_required
-    def delete(self, item_id=11):
+    def delete(self, item_id=None):
         qry = Items.query.get(item_id)
         if qry is None:
             return {'status': 'NOT_FOUND'}, 404
@@ -86,6 +86,7 @@ class ItemResource(Resource):
         qry.detail = args['detail']
         qry.url = args['url']
         qry.total = args['total']
+        db.session.commit()
 
         return marshal(qry, Items.response_fields), 200
 

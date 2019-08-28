@@ -19,13 +19,15 @@ class TransaksiResource(Resource):
     def __init__(self):
         pass
 
-    def options(self):
+    def options(self, user_id=None):
         return {"Success": "Ok"}, 200
 
     @jwt_required
     # @internal_required
-    def get(self, transaksi_id=None):
-        qry = Transactions.query.get(transaksi_id)
+    def get(self, user_id=None):
+        claim = get_jwt_claims()
+        user_id = claim['id']
+        qry = Transactions.query.get(user_id)
         if qry is not None:
             return marshal(qry, Transactions.response_fields), 200
         return {'status': 'NOT_FOUND'}, 404
@@ -37,12 +39,14 @@ class TransaksiResource(Resource):
         user_id = claim['id']
         parser = reqparse.RequestParser()
         parser.add_argument('item_id', location='json', required=True)
+        parser.add_argument('nama_item', location='json', required=True)
         parser.add_argument('total_qty', location='json', required=True)
         parser.add_argument('total_harga', location='json', required=True)
+        parser.add_argument('tanggal', location='json', required=True)
         args = parser.parse_args()
 
         transaksi = Transactions(
-            user_id, int(args['item_id']), int(args['total_qty']), int(args['total_harga']))
+            user_id, int(args['item_id']), args['nama_item'], int(args['total_qty']), int(args['total_harga']), args["tanggal"])
         db.session.add(transaksi)
         db.session.commit()
 
@@ -99,7 +103,7 @@ class TransaksiList(Resource):
         parser = reqparse.RequestParser()
         parser.add_argument('p', default=1, location='args', type=int)
         parser.add_argument('rp', default=25, location='args', type=int)
-        parser.add_argument('user_id', location='args', help='invalid status')
+        # parser.add_argument('user_id', location='json', help='invalid status')
         # parser.add_argument('nama', location='args', help='invalid status')
         # parser.add_argument('orderby', location='args', help='invalid status', choices=('harga'))
         # parser.add_argument('sort', location='args', help='invalid sort value', choices=('desc', 'asc'))
@@ -109,8 +113,10 @@ class TransaksiList(Resource):
 
         qry = Transactions.query
 
-        if args['user_id'] is not None:
-            qry = qry.filter_by(user_id=args['user_id'])
+        claim = get_jwt_claims()
+        user_id = claim['id']
+        if user_id is not None:
+            qry = qry.filter_by(user_id=user_id)
 
         # if args['nama'] is not None:
         #     qry = qry.filter_by(nama=args['nama'])

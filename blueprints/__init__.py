@@ -1,4 +1,3 @@
-
 import json
 import logging
 from flask import Flask, request
@@ -16,7 +15,8 @@ app = Flask(__name__)
 CORS(app)
 
 app.config['APP_DEBUG'] = True
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@127.0.0.1:3306/ecommerce'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@127.0.0.1:3306/ecommerce'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://admin:Altabatch3@e-commerce.chrpcgbaee9q.ap-southeast-1.rds.amazonaws.com:3306/ecommerce'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
@@ -104,10 +104,11 @@ def after_request(response):
 # from blueprints.transaksi_detail.resources import bp_transaksi_detail
 # from blueprints.cart.resoruces import bp_cart
 # from blueprints.user_detail.resources import bp_user_detail
-from blueprints.user.resources import bp_user
-from blueprints.auth.resources import bp_auth
-from blueprints.item.resources import bp_item
+
 from blueprints.transaksi.resources import bp_transaksi
+from blueprints.item.resources import bp_item
+from blueprints.auth.resources import bp_auth
+from blueprints.user.resources import bp_user
 # app.register_blueprint(bp_client, url_prefix='/client')
 app.register_blueprint(bp_user, url_prefix='/user')
 app.register_blueprint(bp_auth, url_prefix='/auth')
