@@ -1,11 +1,4 @@
-eval "$(ssh-agent -s)" &&
-ssh-add -k ~/.ssh/id_rsa &&
-cd /var/www/helloworld
-git pull
-
-source ~/.profile
-echo "$DOCKERHUB_PASS" | docker login --username $DOCKERHUB_USER --password-stdin
-docker stop helloworld
-docker rm helloworld
-docker rmi aprynur/helloworld
-docker run -d --name helloworld -p 5000:5000 aprynur/helloworld:latest
+docker stop flask-api
+docker rm flask-api
+docker rmi alfaruqi26/flask-api
+docker run -d --name flaskbaru -p 5000:5000 alfaruqi26/flask-api:2.0

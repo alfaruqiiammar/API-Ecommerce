@@ -6,7 +6,7 @@ os:
 - linux
 env:
   global:
-  - DOCKER_IMAGE_NAME="fix_react"
+  - DOCKER_IMAGE_NAME="flask-api"
   - DOCKER_HUB_ORG="alfaruqi26"
 before_script:
 - openssl aes-256-cbc -K $encrypted_05e43d5a699e_key -iv $encrypted_05e43d5a699e_iv
