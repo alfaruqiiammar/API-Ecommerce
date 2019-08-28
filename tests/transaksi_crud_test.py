@@ -5,12 +5,12 @@ from . import app, user, cache, create_token_admin, create_token_user
 class TestTransCrud():
     var = 0
 
-    def test_User_valid_input_post_name(self, user):
+    def test_Trans_valid_input_post_name(self, user):
         token = create_token_admin()
         data = {
             'user_id': 2,
             'item_id': 1,
-            'nama_item': 'testting',
+            'nama_item': 'testting1',
             'total_qty': 10,
             'total_harga': 10,
             'tanggal': "Aug 28 2019",
@@ -20,56 +20,44 @@ class TestTransCrud():
                         headers={'Authorization': 'Bearer ' + token},
                         content_type='application/json')
 
-#         res_json = json.loads(res.data)
-#         TestUserCrud.var = res_json['user_id']
-#         assert res.status_code == 200
+        res_json = json.loads(res.data)
+        TestTransCrud.var = res_json['user_id']
+        assert res.status_code == 200
 
-#     def test_User_invalid_post_name(self, user):
-#         token = create_token_admin()
-#         data = {
-#             'username': 'ammar',
-#             'status': True,
-#         }
-#         # karena post menggunakan data, sedangkan get menggunkan query_string
-#         res = user.post('/user', data=json.dumps(data),
-#                         headers={'Authorization': 'Bearer ' + token},
-#                         content_type='application/json')
+    def test_User_invalid_post_name(self, user):
+        token = create_token_admin()
+        data = {
+            'user_id': 2,
+            'item_id': 1,
+            'nama_item': 'testting1',
+            'total_qty': 10,
+        }
+        # karena post menggunakan data, sedangkan get menggunkan query_string
+        res = user.post('/transaksi', data=json.dumps(data),
+                        headers={'Authorization': 'Bearer ' + token},
+                        content_type='application/json')
 
-#         res_json = json.loads(res.data)
-#         assert res.status_code == 400
+        res_json = json.loads(res.data)
+        assert res.status_code == 400
 
-#     def test_user_getlist(self, user):  # user dr init test
-#         token = create_token_admin()
-#         res = user.get('/user',
-#                        headers={'Authorization': 'Bearer ' + token},
-#                        content_type='application/json')
+    def test_transaksi_getlist(self, user):  # user dr init test
+        token = create_token_admin()
+        res = user.get('/transaksi',
+                       headers={'Authorization': 'Bearer ' + token},
+                       content_type='application/json')
 
-#         res_json = json.loads(res.data)
-#         assert res.status_code == 200
+        res_json = json.loads(res.data)
+        assert res.status_code == 200
 
-#     def test_invalid_user_getlist(self, user):  # user dr init test
-#         token = create_token_admin()
-#         res = user.get('/daftar/list112',
-#                        headers={'Authorization': 'Bearer ' + token},
-#                        content_type='application/json')
+    def test_invalid_transaksi_getlist(self, user):  # user dr init test
+        token = create_token_admin()
+        res = user.get('/transaki/list112',
+                       headers={'Authorization': 'Bearer ' + token},
+                       content_type='application/json')
 
-#         res_json = json.loads(res.data)
-#         assert res.status_code == 404
+        res_json = json.loads(res.data)
+        assert res.status_code == 404
 
-#     def test_user_get_valid_id_token(self, user):
-#         token = create_token_user()
-#         res = user.get('/user/'+str(TestUserCrud.var),
-#                        headers={'Authorization': 'Bearer ' + token})
-
-#         res_json = json.loads(res.data)
-#         assert res.status_code == 200
-
-#     def test_user_get_invalid_id_token(self, user):
-#         res = user.get('/user/25',
-#                        headers={'Authorization': 'Bearer abc'})
-
-#         res_json = json.loads(res.data)
-#         assert res.status_code == 500
 
 #     def test_user_valid_put_token(self, user):
 #         token = create_token_admin()
