@@ -21,14 +21,14 @@ def create_token_admin():
     if token is None:
         # prepare request input
         data = {
-            'username': 'ammar',
-            'password': 'satudua'
+            'username': 'Admin',
+            'password': 'admin123'
         }
         # do request
         req = call_user(request)
         res = req.post('/auth',
-                        data=json.dumps(data),
-                        content_type='application/json')
+                       data=json.dumps(data),
+                       content_type='application/json')
 
         # store response
         res_json = json.loads(res.data)
@@ -50,14 +50,14 @@ def create_token_user():
     if token is None:
         # prepare request input
         data = {
-            'username': 'Dwita',
-            'password': 'dwita123'
+            'username': 'Ammar',
+            'password': 'ammar'
         }
         # do request
         req = call_user(request)
         res = req.post('/auth',
-                        data=json.dumps(data),
-                        content_type='application/json')
+                       data=json.dumps(data),
+                       content_type='application/json')
 
         # store response
         res_json = json.loads(res.data)

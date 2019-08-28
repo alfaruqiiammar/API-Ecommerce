@@ -57,14 +57,14 @@ class TestUserCrud():
     def test_user_get_valid_id_token(self, user):
         token = create_token_user()
         res = user.get('/user/'+str(TestUserCrud.var),
-                        headers={'Authorization':'Bearer ' + token})
+                       headers={'Authorization': 'Bearer ' + token})
 
         res_json = json.loads(res.data)
         assert res.status_code == 200
 
     def test_user_get_invalid_id_token(self, user):
         res = user.get('/user/25',
-                        headers={'Authorization':'Bearer abc'})
+                       headers={'Authorization': 'Bearer abc'})
 
         res_json = json.loads(res.data)
         assert res.status_code == 500
@@ -78,7 +78,7 @@ class TestUserCrud():
             'status': True,
         }
         res = user.put('/user/'+str(TestUserCrud.var),
-                        headers={'Authorization':'Bearer ' + token})
+                       headers={'Authorization': 'Bearer ' + token})
 
         res_json = json.loads(res.data)
         assert res.status_code == 400
@@ -86,10 +86,10 @@ class TestUserCrud():
     def test_user_invalid_put_token(self, user):
         token = create_token_admin()
         data = {
-            'username':'SECRET10',
+            'username': 'SECRET10',
         }
         res = user.put('/user/15',
-                        headers={'Authorization':'Bearer ' + token})
+                       headers={'Authorization': 'Bearer ' + token})
 
         res_json = json.loads(res.data)
         assert res.status_code == 400
@@ -97,7 +97,7 @@ class TestUserCrud():
     def test_user_valid_delete_token(self, user):
         token = create_token_admin()
         res = user.delete('/user/'+str(TestUserCrud.var),
-                        headers={'Authorization':'Bearer ' + token})
+                          headers={'Authorization': 'Bearer ' + token})
 
         res_json = json.loads(res.data)
         assert res.status_code == 200
@@ -105,7 +105,7 @@ class TestUserCrud():
     def test_user_invalid_delete_token(self, user):
         token = create_token_admin()
         res = user.delete('/user/120',
-                        headers={'Authorization':'Bearer ' + token})
+                          headers={'Authorization': 'Bearer ' + token})
 
         res_json = json.loads(res.data)
         assert res.status_code == 404
